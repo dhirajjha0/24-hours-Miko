@@ -31,8 +31,8 @@ PORT = os.environ.get("PORT", "8080")
 DB_URI = "mongodb+srv://djha8908:lsuC0Bjticz4bYEV@cluster0.5nhqfeh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 DB_NAME = os.environ.get("DATABASE_NAME", "filesharexbot")
 
-SHORTLINK_URL = os.environ.get("SHORTLINK_URL", "inshorturl.com")
-SHORTLINK_API = os.environ.get("SHORTLINK_API", "d04b73d25d7e65333bf9f0d25b4b677e4ab669da")
+SHORTLINK_URL = os.environ.get("SHORTLINK_URL", "MODIJIURL.COM")
+SHORTLINK_API = os.environ.get("SHORTLINK_API", "40907a60fc229f0db1c8a686e07138ff56fdde4a")
 VERIFY_EXPIRE = int(os.environ.get('VERIFY_EXPIRE', 36000)) # Add time in seconds
 IS_VERIFY = os.environ.get("IS_VERIFY", "True")
 TUT_VID = os.environ.get("TUT_VID","https://t.me/how_to_hentai/15")
@@ -47,8 +47,8 @@ TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "100"))
 START_MSG = os.environ.get("START_MESSAGE", "Hello {first}\n\nI can store private files in Specified Channel and other users can access it from special link.")
 try:
     ADMINS=[]
-    for x in (os.environ.get("ADMINS", "6396073425,5593915146,5857939104").split()):
-        ADMINS.append(int(3))
+    for x in (os.environ.get("ADMINS", "").split()):
+        ADMINS.append(int(x))
 except ValueError:
         raise Exception("Your Admins list does not contain valid integers.")
 
@@ -67,8 +67,7 @@ DISABLE_CHANNEL_BUTTON = os.environ.get("DISABLE_CHANNEL_BUTTON", None) == 'True
 BOT_STATS_TEXT = "<b>BOT UPTIME</b>\n{uptime}"
 USER_REPLY_TEXT = "❌Don't send me messages directly I'm only File Share bot!"
 
-ADMINS.append(6396073425)
-ADMINS.append(5593915146)
+ADMINS.append(OWNER_ID)
 ADMINS.append(5857939104)
 
 LOG_FILE_NAME = "filesharingbot.txt"
